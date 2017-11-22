@@ -35,7 +35,7 @@ public class Register extends AppCompatActivity {
                 String inputname = namsur.getText().toString();
                 String inputemail = email.getText().toString();
                 String inputpass = password.getText().toString();
-                int inputage = Integer.parseInt(age.getText().toString());
+
                 if((inputname.isEmpty()) && (inputemail.isEmpty())){
                     Toast.makeText(Register.this, "You can skip only Password!", Toast.LENGTH_LONG).show();
                 } else {
@@ -44,8 +44,8 @@ public class Register extends AppCompatActivity {
                 editor.putString("name", inputname);
                 editor.putString("email", inputemail);
                 editor.putString("pass", inputpass);
-                editor.putInt("age" , inputage);
-                editor.commit();
+                editor.putInt("age", Integer.parseInt(age.getText().toString()));
+                editor.apply();
                 Intent i = new Intent(getApplicationContext(), Login.class);
                 startActivity(i);
                 finish();
