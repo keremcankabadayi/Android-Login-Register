@@ -27,6 +27,7 @@ public class Login extends AppCompatActivity {
         String getemail = shf.getString("email", "");
         String getpass = shf.getString("pass", "");
 
+
         if((!getemail.isEmpty()) || (!getpass.isEmpty())){
         mail.setText(getemail);
         password.setText(getpass);
