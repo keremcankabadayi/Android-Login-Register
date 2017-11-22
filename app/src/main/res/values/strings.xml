@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Login Application</string>
+    <string name="welcome">Welcome!</string>
+    <string name="logout">Log out</string>
+    <string name="email">E-mail</string>
+    <string name="pass">Password (Optional)</string>
+    <string name="registerbtn">Register</string>
+    <string name="loginbtn">Login</string>
+    <string name="namsur">Name and Surname</string>
+    <string name="age">Age</string>
+    <string name="openurl">OPEN WEBSITE</string>
+    <string name="openloc">OPEN LOCATION</string>
+    <string name="sharetext">SHARE THIS TEXT</string>
+    <string name="url">e.g google.com</string>
+    <string name="location">e.g Espark, Eskisehir</string>
+    <string name="sms">e.g On my way!</string>
+</resources>
