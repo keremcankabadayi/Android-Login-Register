@@ -13,6 +13,7 @@ public class Register extends AppCompatActivity {
 
     Button register;
     EditText namsur, email, password, age;
+    int inputage;
 
 
     @Override
@@ -23,7 +24,7 @@ public class Register extends AppCompatActivity {
 
         namsur = (EditText) findViewById(R.id.inputnamsur);
         email = (EditText) findViewById(R.id.inputemail);
-        age = (EditText) findViewById(R.id.editText4);
+        age = (EditText) findViewById(R.id.inputage);
         password = (EditText) findViewById(R.id.inputpass);
 
         register = (Button) findViewById(R.id.registerbtn);
@@ -34,7 +35,7 @@ public class Register extends AppCompatActivity {
                 String inputname = namsur.getText().toString();
                 String inputemail = email.getText().toString();
                 String inputpass = password.getText().toString();
-
+                int inputage = Integer.parseInt(age.getText().toString());
                 if((inputname.isEmpty()) && (inputemail.isEmpty())){
                     Toast.makeText(Register.this, "You can skip only Password!", Toast.LENGTH_LONG).show();
                 } else {
@@ -43,6 +44,7 @@ public class Register extends AppCompatActivity {
                 editor.putString("name", inputname);
                 editor.putString("email", inputemail);
                 editor.putString("pass", inputpass);
+                editor.putInt("age" , inputage);
                 editor.commit();
                 Intent i = new Intent(getApplicationContext(), Login.class);
                 startActivity(i);
